@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="audio.css">
+    <script src="audio.js"></script>
+</head>
+<body>
+   
+<button id="playpausebtn">
+     <img id="playbtn" src="pause.png" width="23px" alt="">
+        <img  id="pausebtn" src="play.webp" width="20px" alt="">
+</button>
+        <img  id="mutebtn" src="mute.png" width="30px" alt="">
+
+<div style="width:100%">
+<input id="seekslider"  type="range" style="width:1000px" min="0" max="100" value="0" step="1">
+</div><div id="timebox">
+  <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
+</div>
+<input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+   <div id="content">
+  <input type="file" id="thefile"   accept="audio/*" />
+  <canvas id="canvas"></canvas>
+  
+  <script>
+    window.addEventListener("load", onload);
+
+    function onload(){
+         document.getElementById("playbtn").style.display='none'
+          document.getElementById("pausebtn").style.display='block'
+
+    }
+ 
+
+</script>
+</body>
+</html>
