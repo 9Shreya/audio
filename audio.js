@@ -14,7 +14,9 @@ function initAudioPlayer(val){
 	durtimetext = document.getElementById("durtimetext");
 	// Add Event Handling
 	playbtn.addEventListener("click",playPause);
-	mutebtn.addEventListener("click", mute);
+    mutebtn.addEventListener("click",mute);
+    	mutebtnop.addEventListener("click", mute);
+
 	seekslider.addEventListener("mousedown", function(event){ seeking=true; seek(event); });
 	// seekslider.addEventListener("mousemove", function(event){ seek(event); });
 	seekslider.addEventListener("mouseup",function(){ seeking=false; });
@@ -39,11 +41,14 @@ function initAudioPlayer(val){
     playPause()
 	function mute(){
 		if(audio.muted){
-		    audio.muted = false;
-		    mutebtn.style.background = "url(images/speaker.png) no-repeat";
+            audio.muted = false;
+            console.log('mutee');
+            document.getElementById("mutebtnop").style.display='block'
+            document.getElementById("mutebtn").style.display='none'
 	    } else {
-		    audio.muted = true;
-		    mutebtn.style.background = "url(images/speaker_muted.png) no-repeat";
+            audio.muted = true;
+              document.getElementById("mutebtn").style.display='block'
+             document.getElementById("mutebtnop").style.display='none'
 	    }
 	}
 	function seek(event){

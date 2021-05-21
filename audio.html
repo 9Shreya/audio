@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="audio.css">
-    <script src="audio.js"></script>
 </head>
 <body>
    
@@ -13,7 +12,9 @@
      <img id="playbtn" src="pause.png" width="23px" alt="">
         <img  id="pausebtn" src="play.webp" width="20px" alt="">
 </button>
-        <img  id="mutebtn" src="mute.png" width="30px" alt="">
+        <img  id="mutebtn" src="mute.png"  alt="">
+        <img  id="mutebtnop" src="notmute.png"  alt="">
+
 
 <div style="width:100%">
 <input id="seekslider"  type="range" style="width:1000px" min="0" max="100" value="0" step="1">
@@ -24,7 +25,8 @@
    <div id="content">
   <input type="file" id="thefile"   accept="audio/*" />
   <canvas id="canvas"></canvas>
-  
+      <script src="audio.js"></script>
+
   <script>
     window.addEventListener("load", onload);
 
